@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Population pyramid</title>
+    <link rel="stylesheet" type="text/css" href="spectre.min.css" />
+  </head>
+
+  <body>
+    <h1>Population pyramid generator</h1>
+    <form id="form">
+      <p>
+        <label for="title">Title</label><br />
+        <input type="text" id="title" name="title" value="" />
+      </p>
+      <p>
+        <label for="data">Data</label><br />
+        <textarea
+          id="data"
+          name="data"
+          rows="10"
+          cols="30"
+          placeholder='[ { age: "0-4", male: 2000, female: 2500 } ]'
+        ></textarea
+        >
+      </p>
+      <p>
+        <label for="source">Source</label><br />
+        <input type="text" id="source" name="source" value="" />
+      </p>
+      <button type="submit">Submit</button>
+    </form>
+    <svg id="container"></svg>
+    <p>
+      <button id="btn-download-svg">Download SVG</button>
+      <button id="btn-download-jpg">Download JPG</button>
+    </p>
+    <script type="module" src="script.js"></script>
+  </body>
+  <style>
+    body {
+      margin: 20pt;
+    }
+    textarea {
+      font-family: monospace;
+    }
+  </style>
+</html>
